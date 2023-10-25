@@ -4,25 +4,28 @@
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
-
+        <!--
+           Muhammad Lutfi Ruhallah
+                6706223092 -->
         <!-- Username -->
-        <div>
-            <x-input-label for="Username" :value="__('Username')" />
-            <x-text-input id="Username" class="block mt-1 w-full" type="text" name="username" :value="old('Username')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('Username')" class="mt-2" />
-        </div>
+<div>
+    <x-input-label for="username" :value="__('Username')" />
+    <x-text-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus autocomplete="username" />
+    <x-input-error :messages="$errors->get('username')" class="mt-2" />
+</div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+<!-- Password -->
+<div class="mt-4">
+    <x-input-label for="password" :value="__('Password')" />
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
+    <x-text-input id="password" class="block mt-1 w-full"
+                    type="password"
+                    name="password"
+                    required autocomplete="current-password" />
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
+    <x-input-error :messages="$errors->get('password')" class="mt-2" />
+</div>
+
 
         <!-- Remember Me -->
         <div class="block mt-4">

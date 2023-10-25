@@ -13,10 +13,10 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
+     * Muhammad Lutfi Ruhallah
+     * 6706223092
+     * D3 RPLA 46-03
      * The attributes that are mass assignable.
-     * Nama     : Muhammad Lutfi Ruhallah
-     * NIM      : 67062230092
-     * Kelas    : 4603
      * @var array<int, string>
      */
     protected $fillable = [
@@ -50,4 +50,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function setPasswordAttribute($password)
+    {
+        if ($password) {
+            $this->attributes['password'] = bcrypt($password);
+        }
+    }
 }
+
+

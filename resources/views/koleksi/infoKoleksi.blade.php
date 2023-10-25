@@ -4,10 +4,10 @@
             {{ __('Informasi Koleksi') }}
         </h2>
     </x-slot>
-<!--  
-| Nama  : Muhammad Lutfi RUhallah
-| NIM   : 6706223092
-| Kelas : D3IF-4603 
+<!--
+|Muhammad Lutfi Ruhallah
+6706223092
+D3 RPLA 46-03
 -->
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">

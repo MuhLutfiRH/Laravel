@@ -6,23 +6,22 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
+    /** Muhammad Lutfi Ruhallah
+     * 6706223092
      * Run the migrations.
      */
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            //Muhammad Lutfi Ruhallah
-            //6706223092
+            //penambahan kolom baru
             $table->string('username', 100);
             $table->string('address', 1000);
             $table->string('phoneNumber', 20);
-            $table->date('birthdate')->nullable;
+            $table->date('birthdate')->nullable();
 
-            //modifikasi kolom
+            //Modifikasi Kolom
             $table->renameColumn('name', 'fullname');
             $table->string('email')->nullable()->change();
-
         });
     }
 

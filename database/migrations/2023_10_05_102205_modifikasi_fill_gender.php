@@ -11,13 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('koleksi', function (Blueprint $table) {
-            //Muhammad Lutfi Ruhallah
-            $table->integer('id',11);
-            $table->string('namaKoleksi,100');
-            $table->tinyinteger('jenisKoleksi');
-            $table->date('createdAt');
-            $table->integer('jumlahKoleksi');
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('gender', 10)->change();
         });
     }
 
@@ -26,7 +21,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('koleksi', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
             //
         });
     }

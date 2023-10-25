@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            //Muhammad Lutfi Ruhallah 6706223092
-            $table->string('religion', 20);
-            $table->tinyInteger('gender'); 
+        Schema::create('koleksi', function (Blueprint $table) {
+            $table->id();
+            $table->string('namaKoleksi',100);
+            $table->tinyInteger('jenisKoleksi');
+            $table->integer('jumlahKoleksi');
+            $table->timestamps();
         });
     }
 
@@ -23,8 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-        });
+        //
     }
 };

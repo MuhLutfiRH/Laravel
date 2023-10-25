@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 
 class RegisteredUserController extends Controller
 {
@@ -24,10 +26,6 @@ class RegisteredUserController extends Controller
     }
 
     /**
-     * Handle an incoming registration request.
-     * Nama     : Muhammad Lutfi Ruhallah
-     * NIM      : 6706223092
-     * Kelas    : 4603
      * @throws \Illuminate\Validation\ValidationException
      */
     public function store(Request $request): RedirectResponse
@@ -42,7 +40,6 @@ class RegisteredUserController extends Controller
             'phonenumber' => ['required', 'string', 'max:20'],
             'religion' => ['required', 'string', 'max:20'],
             'gender' => ['required', 'integer', 'min:0', 'max:1'],
-            // 0 male, 1 female
         ]);
 
         $user = User::create([

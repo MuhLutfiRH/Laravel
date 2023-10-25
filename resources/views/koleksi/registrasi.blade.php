@@ -14,11 +14,11 @@
                     {{ Session::get('success') }}
                 </div>
                 @endif
-<!-- 
-| Nama  : Muhammad Lutfi Ruhallah
-| NIM   : 6706223092
-| Kelas : D3IF-4603 
---> 
+<!--
+Muhammad Lutfi Ruhallah
+6706223092
+D3 RPLA 46-03
+-->
                     <form action="{{ route('koleksi.store') }}" method="POST">
                         @csrf
                         <!-- Nama Koleksi -->
